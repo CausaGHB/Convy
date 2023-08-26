@@ -32,7 +32,6 @@ fn convert_image(array_buffer: Vec<u8>, format: String, width: Option<u32>, heig
 
     let format = match format.as_str() {
         "png" => ImageFormat::Png,
-        "gif" => ImageFormat::Gif,
         "bmp" => ImageFormat::Bmp,
         "jpeg" => ImageFormat::Jpeg,
         "webp" => ImageFormat::WebP,
