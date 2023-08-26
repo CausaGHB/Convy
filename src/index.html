@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convy</title>
+    <script type="module" src="main.js"></script>
+  </head>
+
+  <body>
+    <div id="sect1">
+      <h1>Image Converter</h1>
+      <input id="low" readonly type="text">
+      <img src="assets/convyman.png">
+    </div>
+    <div id="sect2">
+      <form id="form">
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+        <label for="file-upload" class="custom-file-upload" id="btn-choose">
+            Choose File
+        </label>
+        <input id="file-upload" type="file" accept="image/*, video/*"/>
+        <br><br>
+        <div id="sect3">
+        <select id="format-select">
+            <option value="png">PNG</option>
+            <option value="jpeg">JPEG</option>
+            <option value="bmp">BMP</option>
+            <option value="webp">WEBP</option>
+            <option value="ico">ICO</option>
+        </select>
+        <br><br>
+        <div id="sect4">
+        <label for="width-input" style="color: white;">Width:</label>
+        <input id="width-input" type="number" min="1"/>
+        <br><br>
+        <label for="height-input" style="color: white;">Height:</label>
+        <input id="height-input" type="number" min="1"/>
+        </div>
+        </div>
+        <br><br>
+
+        <div id="sect5">
+          <label for="aspect-ratio-checkbox" style="color: white;">Preserve Aspect Ratio:</label>
+          <input id="aspect-ratio-checkbox" type="checkbox" checked>
+        </div>
+
+        <button type="submit" id="btn-submit">Convert</button>
+      </form>
+    </div>
+  </body>
+</html>

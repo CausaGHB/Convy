@@ -1,0 +1,175 @@
+@font-face {
+  font-family: VT323;
+  src: url("assets/VT323/VT323-Regular.ttf");
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #aa2a3b;
+  --tertiary-color: #111111;
+  --quaternary-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: row;
+  font-family: VT323;
+  overflow-y: hidden;
+}
+
+#btn-submit {
+  font-size: 28px;
+  font-family: VT323;
+}
+
+#btn-choose {
+  font-size: 28px;
+}
+
+#sect1, #sect2 {
+  width: 50%;
+}
+
+#sect2 {
+  padding-top: 3rem;
+  background-color: var(--primary-color);
+}
+
+#sect3 {
+  display: flex;
+}
+
+#sect4 {
+  margin-left: 1rem;
+  font-size: 20px;
+}
+
+img {
+  height: 13.5rem;
+  margin-top: 62px;
+}
+
+#low {
+  z-index: 99;
+  font-family: VT323;
+  font-size: 1.8rem;
+  position: absolute;
+  margin-left: 3rem;
+  margin-top: 8.8rem;
+  width: 15rem;
+  height: 1.7rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 1.7rem;
+  font-size: 3.5rem;
+  padding-left: 10px;
+  transition: all ease 0.4s;
+}
+
+h1:hover {
+  text-shadow: 5px 5px black;
+  translate: -2px -2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: none;
+  color: var(--quaternary-color);
+  padding: .8rem 1.5rem;
+  border-radius: .3rem;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+label[for="format-select"] {
+    margin-top: .8rem;
+    font-size: .9rem;
+    color: var(--quaternary-color);
+}
+
+select {
+    margin-top: .5rem;
+    padding: .5rem .6rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+}
+
+button[type="submit"] {
+    margin-top: .8rem;
+    padding: .8rem 1.5rem;
+    border-radius: .3rem;
+    border:none;
+    cursor:pointer;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Add animations */
+form input, form select, form button, #file-upload {
+    transition-duration: .3s;
+}
+
+form input:focus, form select:focus, form button:hover {
+    transform : scale(1.05);
+}
+
+#width-input {
+  width: 6rem;
+}
+
+#height-input {
+  width: 5.7rem;
+}
+
+#language-select {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.jump1 {
+  animation: jump 0.5s ease-in-out;
+}
+
+.jump2 {
+  animation: jump 0.7s ease-in-out;
+}
